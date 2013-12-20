@@ -23,7 +23,6 @@ var parser = new ArgParse({
   addHelp: true,
   description: pkgInfo.description,
   debug: true
-
 });
 
 parser.addArgument(
@@ -65,18 +64,58 @@ parser.addArgument(
   }
 );
 
+parser.addArgument(
+  ['--stdin'],
+  {
+    help: 'Indicate that input will come from stdin instead of from a file.',
+    dest: 'useStdin',
+    action: 'storeTrue'
+  }
+);
+
+parser.addArgument(
+  ['-c', '--colored'],
+  {
+    help: 'Screen output will be colored.',
+    dest: 'colored',
+    action: 'storeTrue'
+  }
+);
+
+parser.addArgument(
+  ['--verbose'],
+  {
+    help: 'Verbose output - includes error/warning codes, similar to `jshint --verbose`.',
+    dest: 'verbose',
+    action: 'storeTrue'
+  }
+);
+
+parser.addArgument(
+  ['--show-lines'],
+  {
+    help: 'Show line references next to errors.',
+    dest: 'showLineRefs',
+    action: 'storeTrue'
+  }
+);
+
+
 // this oddly wraps the arguments in an extra array...
 parser.addArgument(
   ['files'],
   {
     help: 'List of files to hint',
-    nargs: '+',
+    nargs: '?',
     action: 'append'
   }
 );
 
 try {
   args = parser.parseArgs();
+  if (args.files.length === 1 && args.files[0] === null && !args.useStdin && !args.globs.length){
+    throw new Error("A file, --glob, or --stdin must be specified! Run 'jsxhint -h' for details.");
+  }
 } catch (e){
   console.log(e.message.replace(/cli\.js/, 'jsxhint'));
   process.exit(1);
@@ -84,5 +123,5 @@ try {
 
 globs = args.globs.concat(args.files[0]);
 var prjRoot = process.cwd();
-var tasks = jsxhint.generateTasks(globs, args.ignoreList, args.ignoreFile, args.jshintrc, prjRoot);
+var tasks = jsxhint.generateTasks(globs, args, prjRoot);
 runnel(tasks);
