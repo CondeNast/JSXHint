@@ -1,0 +1,15 @@
+usage: jsxhint <files> -- <jshint-options>
+
+  Transforms React's JSX syntax files (either noted by a .jsx extension
+  or the presence of a /** @jsx React.DOM */ header) into javascript files
+  and then runs JSHint on the project
+
+Examples:
+
+  Transform all jsx files and run jshint with default options
+
+    jsxhint
+
+  Transform a single file and then lint with the checkstyle reporter
+
+    jsxhint test.jsx -- --reporter=checkstyle

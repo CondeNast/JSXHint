@@ -33,10 +33,14 @@
   "dependencies": {
     "runnel": "~0.5.1",
     "glob": "~3.2.6",
-    "jshint": "~2.1.10",
     "react-tools": "~0.4.1",
     "argparse": "~0.1.15",
-    "colors": "~0.6.2"
+    "colors": "~0.6.2",
+    "mutiny": "~0.3.1",
+    "through2": "~0.2.3",
+    "minimist": "0.0.5",
+    "tmp": "0.0.23",
+    "rimraf": "~2.2.5"
   },
   "devDependencies": {
     "tap": "~0.4.6",
