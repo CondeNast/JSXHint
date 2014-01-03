@@ -7,7 +7,7 @@
   "scripts": {
     "test": "tap test/test.js",
     "lint": "jshint",
-    "postinstall": "if [[ -d .git ]]; then cp pre-commit.sh .git/hooks/pre-commit && chmod +x .git/hooks/pre-commit; fi",
+    "postinstall": "node post-install",
     "precommit": "npm run lint && npm test",
     "prepublish": "docme README.md-- --configure ./.jsdocrc.json"
   },
