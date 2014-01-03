@@ -37,6 +37,7 @@ Optional arguments:
 <!-- START docme generated API please keep comment here to allow auto update -->
 <!-- DON'T EDIT THIS SECTION, INSTEAD RE-RUN docme TO UPDATE -->
 
+<div>
 <div class="jsdoc-githubify">
 <section>
 <article>
@@ -115,9 +116,9 @@ Optional arguments:
 <dt class="tag-source">Source:</dt>
 <dd class="tag-source"><ul class="dummy">
 <li>
-<a href="https://github.com/CondeNast/JSXHint/blob/docs/jsxhint.js">jsxhint.js</a>
+<a href="https://github.com/CondeNast/JSXHint/blob/master/jsxhint.js">jsxhint.js</a>
 <span>, </span>
-<a href="https://github.com/CondeNast/JSXHint/blob/docs/jsxhint.js#L329">lineno 329</a>
+<a href="https://github.com/CondeNast/JSXHint/blob/master/jsxhint.js#L329">lineno 329</a>
 </li>
 </ul></dd>
 </dl>
@@ -203,9 +204,9 @@ a. for each glob
 <dt class="tag-source">Source:</dt>
 <dd class="tag-source"><ul class="dummy">
 <li>
-<a href="https://github.com/CondeNast/JSXHint/blob/docs/jsxhint.js">jsxhint.js</a>
+<a href="https://github.com/CondeNast/JSXHint/blob/master/jsxhint.js">jsxhint.js</a>
 <span>, </span>
-<a href="https://github.com/CondeNast/JSXHint/blob/docs/jsxhint.js#L178">lineno 178</a>
+<a href="https://github.com/CondeNast/JSXHint/blob/master/jsxhint.js#L178">lineno 178</a>
 </li>
 </ul></dd>
 </dl>
@@ -228,4 +229,5 @@ Type
 </div>
 
 *generated with [docme](https://github.com/thlorenz/docme)*
+</div>
 <!-- END docme generated API please keep comment here to allow auto update -->
