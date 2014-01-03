@@ -9,7 +9,7 @@
     "lint": "jshint",
     "postinstall": "node post-install",
     "precommit": "npm run lint && npm test",
-    "prepublish": "docme README.md-- --configure ./.jsdocrc.json"
+    "prepublish": "docme README.md -- --configure ./.jsdocrc.json"
   },
   "repository": {
     "type": "git",
