@@ -1,14 +1,15 @@
 {
   "name": "jsxhint",
-  "version": "0.3.0",
+  "version": "0.3.2",
   "description": "Wrapper for JSHint to allow hinting of JSX files",
   "main": "jsxhint.js",
   "bin": "./cli.js",
   "scripts": {
     "test": "tap test/test.js",
     "lint": "jshint",
-    "postinstall": "if [[ -d .git ]]; then cp pre-commit.sh .git/hooks/pre-commit && chmod +x .git/hooks/pre-commit; fi",
-    "precommit": "npm run lint && npm test"
+    "postinstall": "node post-install",
+    "precommit": "npm run lint && npm test",
+    "prepublish": "docme README.md -- --configure ./.jsdocrc.json"
   },
   "repository": {
     "type": "git",
@@ -23,7 +24,11 @@
     "jslint",
     "reactjs"
   ],
-  "author": "Todd Kennedy",
+  "author": {
+    "name": "Todd Kennedy",
+    "email": "<todd@selfassembled.org>",
+    "url": "http://tck.io"
+  },
   "license": "MIT",
   "dependencies": {
     "runnel": "~0.5.1",
@@ -34,6 +39,7 @@
     "colors": "~0.6.2"
   },
   "devDependencies": {
-    "tap": "~0.4.6"
+    "tap": "~0.4.6",
+    "docme": "~0.1.4"
   }
 }
