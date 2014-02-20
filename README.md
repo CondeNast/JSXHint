@@ -1,34 +1,15 @@
 [![build status](https://secure.travis-ci.org/CondeNast/JSXHint.png)](http://travis-ci.org/CondeNast/JSXHint)
 
-#JSXHint
-A wrapper around JSHint to allow linting of files containg JSX syntax
+# THIS PROJECT IS NO LONGER MAINTAINED
 
-Accepts glob patterns. Respects your local .jshintrc file and .gitignore to filter your glob patterns.
+JSHint 2.2.0 supports an "ignore" statement which can be used to wrap blocks of code which should be passed over by the linter.
 
-##Installation
-`npm install -g jsxhint`
-
-##Usage
+```javascript
+/* jshint ignore:start */
+<div><span></span></div>
+/* jshint ignore:end */
 ```
-usage: jsxhint [-h] [-v] [-f IGNOREFILE] [-i IGNORELIST [IGNORELIST ...]]
-               [-r JSHINTRC] [-g GLOBS]
-               files [files ...]
 
-Wrapper for JSHint to allow hinting of JSX files
+I feel this is a much better solution than transforming and wrapping JSHint with a series of transforms since the code produced by JSX's transpiler might produce code which does not comply to your internal lint/hint guidelines.
 
-Positional arguments:
-  files                 List of files to hint
-
-Optional arguments:
-  -h, --help            Show this help message and exit.
-  -v, --version         Show program's version number and exit.
-  -f IGNOREFILE, --ignore-file IGNOREFILE
-                        Use ignore file. Default: .gitignore
-  -i IGNORELIST [IGNORELIST ...], --ignore IGNORELIST [IGNORELIST ...]
-                        Ignore pattern. Globs MUST be wrapped in quotes!
-  -r JSHINTRC, --jshintrc JSHINTRC
-                        Use jshintrc. Default: .jshintrc
-  -g GLOBS, --glob GLOBS
-                        Specify file pattern to hint. Globs MUST be wrapped
-                        in quotes!
-```
+If you feel you need to use a wrapper around JSHint and want to have JSHint run on your transformed JSX code, please see [STRML/JSXHint](STRML/JSXHint)
