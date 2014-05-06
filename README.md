@@ -11,4 +11,4 @@ JSHint 2.2.0 supports an "ignore" statement which can be used to wrap blocks of 
 I feel this is a much better solution than transforming and wrapping JSHint with a series of transforms since the code produced by JSX's transpiler might produce code which does not comply to your internal lint/hint guidelines.
 
 
-If you feel you need to use a wrapper around JSHint and want to have JSHint run on your transformed JSX code, please see [STRML/JSXHint](STRML/JSXHint)
+If you feel you need to use a wrapper around JSHint and want to have JSHint run on your transformed JSX code, please see [STRML/JSXHint](//github.com/STRML/JSXHint)
